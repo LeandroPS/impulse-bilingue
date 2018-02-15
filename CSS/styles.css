@@ -449,6 +449,7 @@ section.why-now{
     transform: translateX(-50%);
     position: relative;
     width: 300px;
+    max-width: calc(100% - 80px);
   }
 
   section.why-now div.why{
@@ -494,6 +495,12 @@ form.schedule{
     font-family: Exo, sans-serif;
     outline: none;
   }
+
+    form button.arrow{
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+    }
 
     form.schedule input::splaceholder{
       color: lightgrey;
@@ -796,6 +803,10 @@ footer div.developed-by{
       
     }
   
+    section.why-now img.clock{
+      margin-bottom: 30px;
+    }
+  
   form{
     padding: 0px!important;
   }
@@ -811,6 +822,12 @@ footer div.developed-by{
       form div.layout>div{
         width: 100%!important;
       }
+  
+  form button.arrow{
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
   
   footer{
     padding: 0px;
