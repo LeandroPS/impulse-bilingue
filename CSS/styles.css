@@ -56,7 +56,12 @@ div.menu{
       border-bottom: 1px solid #fff;
     }
 
-      div.menu ul li.current:after{
+      div.menu ul:not(:hover) li.current:after{
+        width: 100px;
+        transition: all 0.5s;
+      }
+
+      div.menu ul:hover li:hover:after{
         width: 100px;
         transition: all 0.5s;
       }
@@ -338,7 +343,7 @@ section{
       }
 
     section.next-stage div.layout.three.red>div{
-      width: 35%;
+      width: 70%;
       box-sizing: border-box;
       padding: 0px 20px;
       color: #fff;
@@ -346,6 +351,10 @@ section{
 
     section.next-stage div.layout.three.red>div:first-child{
       width: 30%;
+    }
+    
+    section.next-stage div.layout.three.red>div:last-child{
+      column-count: 2;
     }
 
   section.section-quote{
@@ -427,7 +436,7 @@ section.not-all-schools{
   }
 
   section.not-all-schools div.layout div{
-    width: calc(30% - 50px);
+    width: calc(30% - 38px);
     text-align: justify;
   }
 
@@ -463,6 +472,7 @@ section.why-now{
 form.schedule{
   padding: 0px 30px;
   text-align: center;
+  
 }
 
   form.schedule h1.title{
@@ -477,7 +487,7 @@ form.schedule{
       transform: translateX(-50%);
     }
 
-  form.schedule h2{
+  form.schedule>h2{
     font-size: 14pt;
     font-weight: normal;
     margin: 40px;
@@ -505,6 +515,53 @@ form.schedule{
     form.schedule input::splaceholder{
       color: lightgrey;
       font-style: italic;
+    }
+
+  form.schedule div.fields{
+    position: relative;
+  }
+
+  form.schedule div.fields input, form.schedule div.fields button{
+    filter: blur(0px);
+  }
+
+    form.schedule div.fields.blur input, form.schedule div.fields.blur button{
+      filter: blur(3px);
+      transition: filter 1s;
+    }
+
+  form.schedule div.feedback{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 100%;
+    max-width: 300px;
+    
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    text-shadow: 0px 0px 7px rgba(255,255,255,1);
+  }
+
+    form.schedule div.feedback.show{
+      opacity: 1;
+      visibility: visible;
+      top: 50%;
+      
+      transition: opacity 1s, top 1s;
+    }
+
+    form.schedule div.feedback h1{
+      
+    }
+
+    form.schedule div.feedback h2{
+      margin-top: 0px!important;
+      font-size: 14pt;
+      font-weight: lighter;
     }
 
 footer{
@@ -566,6 +623,10 @@ footer div.developed-by{
   .hide-desktop{
     display: none;
   }
+  
+  div.items-player button.next-item, div.items-player button.prev-item, div.dots{
+    display: none;  
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -586,7 +647,7 @@ footer div.developed-by{
   }
   
     div.menu-mobile img{
-      
+      width: 250px;
     }
   
   div.item{
@@ -720,42 +781,198 @@ footer div.developed-by{
   
   div.items-player{
     display: block;
-    height: 188px;
+    height: 240px;
+    position: relative;
+    white-space: nowrap;
+    width: 100%!important;
   }
   
-    div.items-player>div{
+    div.items-player>div.item{
       width: 100%!important;
+      display: inline-block;
+      white-space: normal;
+      transition: left 1s;
+      
       position: absolute;
+      padding: 0px 40px!important;
+      box-sizing: border-box;
       
     }
   
       div.items-player div.current{
+/*        transform: translateX(0%);*/
         left: 0%;
       }
   
       div.items-player div.next{
+/*        transform: translateX(0%);*/
         left: 100%;
       }
   
       div.items-player div.prev{
+/*        transform: translateX(-100%);*/
         left: -100%;
       }
+  
+      div.items-player button.next-item, div.items-player button.prev-item{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 40px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+      }
+  
+        div.items-player button.next-item{
+          right: 10px;
+          background-image: url(../IMAGES/icons/arrow-right-gray.svg);
+        }
+  
+          div.items-player.red button.next-item{
+            background-image: url(../IMAGES/icons/arrow-right-red.svg);
+          }
+  
+        div.items-player button.prev-item{
+          left: 10px;
+          background-image: url(../IMAGES/icons/arrow-left-gray.svg);
+        }
+  
+          div.items-player.red button.prev-item{
+            background-image: url(../IMAGES/icons/arrow-left-red.svg);
+          }
+
+        div.items-player div.dots{
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+          display:inline-block;
+          width: auto!important;
+        }
+    
+          div.items-player div.dots div.dot{
+            display: inline-block;
+            width: 10px!important;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #000;
+            opacity: 0.2;
+          }
+  
+            div.items-player.red div.dots div.dot{
+              background-color: rgb(255,255,255);
+              opacity: 0.5;
+            }
+  
+            div.items-player div.dots div.dot:not(:last-child){
+              margin-right: 5px;
+            }
+  
+          div.items-player div.dots div.dot.current{
+            background-color: #000;
+            opacity: 0.5;
+          }
+  
+            div.items-player.red div.dots div.dot.current{
+              background-color: rgb(255,255,255);
+              opacity: 1;
+            }
+  
+  section.section-quote{
+    height: 500px;
+  }
+  
+    section.section-quote div.quote{
+      width: 216px;
+      height: 247px;
+      padding: 20px 15px 25px 15px;
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+  section.next-stage h2:after{
+    display: none;  
+  }
+  
+  section.next-stage div.layout.three.red{
+    display: block;
+  }
+  
+    section.next-stage div.layout.three.red>div:first-child{
+      padding: 0px 40px;
+    }
+  
+  section.next-stage div.container{
+    width: 100%;
+  }
+  
+  section.next-stage div.layout.three.red>div:first-child{
+    width: 100%;
+  }
+  
+  section.next-stage div.layout.three.red>div:last-child{
+    column-count: 1;
+  }
   
   section.not-all-schools{
     padding: 40px 0px;
     padding-bottom: 65px;
   }
   
-  section.not-all-schools div.shortable{
-    max-height: 350px;
+  div.shortable{
+    max-height: 200px;
     transition: all 1s;
     overflow: hidden;
     text-overflow: ellipsis;
+    position: relative;
   }
   
-  section.not-all-schools div.shortable.long{
+  div.shortable:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: calc(100% - 200px);
+    left: 0;
+    z-index: 2;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+80 */
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  }
+  
+  div.shortable.gray:after{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+80 */
+    background: -moz-linear-gradient(top, rgba(153, 151, 158, 0) 0%, rgba(153, 151, 158, 1) 80%, rgba(153, 151, 158, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(153, 151, 158, 0) 0%,rgba(153, 151, 158, 1) 80%,rgba(153, 151, 158, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(153, 151, 158, 0) 0%,rgba(153, 151, 158, 1) 80%,rgba(153, 151, 158, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099979E', endColorstr='#ff99979E',GradientType=0 ); /* IE6-9 */
+  }
+  
+  div.shortable.long:after{
+    height: 0px;
+    bottom: 0px;
+    transition: height 1s;
+  }
+  
+  div.shortable.long{
     max-height: 600px;
     transition: all 1s;
+/*
+    box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,1);
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,1);
+*/
   }
   
     section.not-all-schools .layout{
@@ -782,6 +999,15 @@ footer div.developed-by{
     
   }
   
+    section.why-impulse-system div.container{
+      width: 100%;
+    }
+  
+      section.why-impulse-system div.container div.layout>div:first-child{
+        padding: 0px 20px;
+        box-sizing: border-box;
+      }
+  
     section.why-impulse-system .layout.two{
       display: block;
     }
@@ -789,6 +1015,10 @@ footer div.developed-by{
       section.why-impulse-system div.layout.two div{
         width: 100%;
       }
+  
+  section.kids{
+    height: 500px;
+  }
   
   section.why-now{
     
@@ -882,12 +1112,48 @@ footer div.developed-by{
     height: 45px;
     border: 2px solid;
     background: transparent;
-    color: #fff;
+    color: #b3b3b3;
     
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
+    position: relative;
+    padding-right: 45px;
+    
+    font-family: 'Exo', sans-serif;
+    font-size: 12pt;
+    outline: none;
+    opacity: 1;
   }
+  
+  button.see-more.disappear{
+    opacity: 0;
+    transition: all 1s;
+    margin-top: -30px;
+    margin-bottom: 0px;
+  }
+  
+    button.see-more:not(:last-child){
+      margin-bottom: 20px;
+    }
+  
+    button.see-more.gray{
+      color: #fff;
+    }
+  
+    button.see-more:after{
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-image: url(../IMAGES/icons/arrow-down-red.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   
 }

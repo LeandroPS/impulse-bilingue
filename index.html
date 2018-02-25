@@ -7,6 +7,7 @@
     <title>Sistema Impulse de Ensino Bilíngue</title>
     <link href="https://fonts.googleapis.com/css?family=Exo:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/styles.css">
+    
   </head>
   <body>
     <main class="wrapper">
@@ -14,16 +15,16 @@
         <div class="container">
           <img class="logo" src="IMAGES/icons/logo.svg">
           <ul>
-            <li class="current">Porque bilíngue?</li>
-            <li>Porque o sistema impulse?</li>
-            <li>Porque agora?</li>
+            <li data-target="why-bilingue" class="current">Porque bilíngue?</li>
+            <li data-target="why-impulse">Porque o sistema impulse?</li>
+            <li data-target="why-now">Porque agora?</li>
           </ul>
         </div>
       </div>
       
        <div class="menu-mobile hide-desktop">
         <div class="container">
-          <img class="logo" src="IMAGES/icons/logo.svg">
+          <img class="logo" src="IMAGES/icons/logo-black.svg">
         </div>
       </div>
 
@@ -38,7 +39,7 @@
           <button class="go-down hide-desktop"></button>
         </div>
       </section>
-      <section class="why-bilingue">
+      <section class="why-bilingue" id="why-bilingue">
         <div class="container layout two-right">
           <div class="text-left">
             <h1 class="title">Por que bilíngue?</h1>
@@ -56,23 +57,30 @@
           </div>
         </div>
         <div class="layout three container perks items-player">
-          <div class="current">
+          <div class="item current">
             <img src="IMAGES/icons/marca.svg">
             <span class="description">
               Sua escola passa a utilizar a expressão "Escola Bilíngue" desde já, associada à sua marca.
             </span>
           </div>
-          <div class="next">
+          <div class="item next">
             <img src="IMAGES/icons/teacher.svg">
             <span class="description">
               Capacitação plena dos professores da sua escola para a proficiência no idioma.
             </span>
           </div>
-          <div class="next">
+          <div class="item next">
             <img src="IMAGES/icons/diamond.svg">
             <span class="description">
               Sua escola se diferencia das demais, sendo percebida como referência em educação
             </span>
+          </div>
+          <button class="next-item"></button>
+          <button class="prev-item"></button>
+          <div class="dots">
+            <div class="dot current"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
         </div>
       </section>
@@ -83,8 +91,8 @@
               <h1>Sua escola elevada ao próximo estagio da educação.</h1>
               <h2>Quais são os benefícios do aluno em estudar inglês na própria escola?</h2>
             </div>
-            <div>
-              <div class="item">
+            <div class="items-player red">
+              <div class="item current">
                 <div class="icon">
                   <img src="IMAGES/icons/pointer.svg">
                 </div>
@@ -92,7 +100,7 @@
                   Escola e curso de idiomas no mesmo local. Comodidade para os pais, segurança para os alunos.
                 </div>
               </div>
-              <div class="item">
+              <div class="item next">
                 <div class="icon">
                   <img src="IMAGES/icons/car.svg">
                 </div>
@@ -100,7 +108,7 @@
                   Para os pais, terminam os transtornos com deslocamento dos filhos entre escola, casa e curso de inglês.
                 </div>
               </div>
-              <div class="item">
+              <div class="item next">
                 <div class="icon">
                   <img src="IMAGES/icons/talk.svg">
                 </div>
@@ -108,9 +116,7 @@
                   Seus alunos concluem os estudos acadêmicos fluentes em inglês.
                 </div>
               </div>
-            </div>
-            <div>
-              <div class="item">
+              <div class="item next">
                 <div class="icon">
                   <img src="IMAGES/icons/hands.svg">
                 </div>
@@ -118,13 +124,20 @@
                   Os alunos se sentem mais confortáveis em um ambiente que já frequentam com colegas que já convivem. Essa experiência elimina barreiras e favorece o aprendizado.
                 </div>
               </div>
-              <div class="item">
+              <div class="item next">
                 <div class="icon">
                   <img src="IMAGES/icons/brain.svg">
                 </div>
                 <div class="text">
                   A prendizagem mais natural e eficaz com a imersão no idioma, atavés de atividades extracurriculares e oficinas.
                 </div>
+              </div>
+              <button class="next-item"></button>
+              <button class="prev-item"></button>
+              <div class="dots">
+                <div class="dot current"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
               </div>
             </div>
           </div>
@@ -147,10 +160,10 @@
         </div>
 
       </section>
-      <section class="why-impulse-system">
+      <section class="why-impulse-system" id="why-impulse">
         <div class="container">
           <div class="layout two">
-            <div>
+            <div class="shortable">
               <h1 class="title">
                 Por que o sistema Impulse?
               </h1>
@@ -161,6 +174,7 @@
                 Diferente de outros programas presentes no mercado, o Sitema Impulse propõe a modelagem de autêntica Escola Bilíngue onde, além do ensino extracurricular, parte do conteúdo acadêmico passa a ser ministrado em Inglês. O resultado? Sua escola e sesu alunos preparados para os desafios deste novo tempo.
               </p>
             </div>
+            <button class="see-more hide-desktop">Leia mais</button>
             <div class="items-player">
               <div class="item current">
                 <div class="icon">
@@ -202,14 +216,20 @@
                   A adoção do Sistema é feita de forma personalizada pelo Executivo Impulse, com base nas particularidades da sua escola. Uma relação de confiança e parceria. 
                 </div>
               </div>
-
+              <button class="next-item"></button>
+              <button class="prev-item"></button>
+              <div class="dots">
+                <div class="dot current"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
             </div>
 
           </div>
         </div>
       </section>
       <section class="not-all-schools">
-        <div class="container layout three shortable">
+        <div class="container layout three shortable gray">
           <div>
             <img class="exclamation" src="IMAGES/icons/exclamation.svg">
             <h2>
@@ -224,12 +244,12 @@
           </div>
           
         </div>
-        <button class="see-more hide-desktop">Veja mais</button>
+        <button class="gray see-more hide-desktop">Leia mais</button>
       </section>
       <section class="kids">
         <div class="background"></div>
       </section>
-      <section class="why-now">
+      <section class="why-now" id="why-now">
         <div class="container">
           <div class="layout two">
             <div>
@@ -239,30 +259,36 @@
               <h1 class="title">Por que agora?</h1>
               <p>Seguindo uma tendência mundial, escolas de todo o país têm se empenhado na adequação ao modelo de ensino bilíngue. Acompanhar as mudanças desse novo cenário passa a ser, em curto prazo, fator de sobrevivência para escolas que desejam se manter competitivas no mercado. Para isso, é preciso que sua escola comece a transição agora.</p>
             </div>
+            <button class="see-more hide-desktop">Leia mais</button>
 
           </div>
           <form class="schedule">
             <h1 class="title">Agende uma visita à sua escola</h1>
             <h2>Envie-nos um e-mail e agende uma reunião com um de nossos representantes.</h2>
-            <div class="layout two">
-              <div>
-                <input class="input name" type="text" placeholder="* Seu nome" required/>
+            <div class="fields">
+              <div class="layout two">
+                <div>
+                  <input class="input name" type="text" placeholder="* Seu nome" required/>
+                </div>
+                <div>
+                  <input class="input school" name="name" type="text" placeholder="* Escola" required/>
+                </div>
               </div>
-              <div>
-                <input class="input name" name="name" type="text" placeholder="* Escola" required/>
+              <div class="layout two">
+                <div>
+                  <input class="input phone" type="tel" placeholder="* Telefone" required/>
+                </div>
+                <div>
+                  <input class="input email" type="email" placeholder="* Seu e-mail" required/>
+                </div>
+              </div>
+
+              <button class="arrow">Enviar solicitação</button>
+              <div class="feedback">
+                <h1>Obrigado</h1>
+                <h2>A gente recebeu sua mensagem e responderemos em breve!</h2>
               </div>
             </div>
-            <div class="layout two">
-              <div>
-                <input class="input name" type="tel" placeholder="* Telefone" required/>
-              </div>
-              <div>
-                <input class="input name" type="email" placeholder="* Seu e-mail" required/>
-              </div>
-            </div>
-
-            <button class="arrow">Enviar solicitação</button>
-
           </form>
         </div>
       </section>
@@ -294,5 +320,13 @@
         </div>
       </footer>
     </main>
+    <script src="JS/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       $(function(){
+          emailjs.init("user_kpWfox04zchAQ1W7a2qYT");
+       });
+    </script>
+    <script src="JS/script.js"></script>
   </body>
 </html>
