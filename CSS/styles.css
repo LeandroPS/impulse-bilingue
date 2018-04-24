@@ -178,9 +178,9 @@ section.header, section.section-quote, section.kids{
 }
 
 section div.background{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
   
   position: absolute;
   width: 100%;
@@ -194,6 +194,9 @@ section div.background{
 
   section.header div.background{
     background-image: url(../IMAGES/header1.jpg);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%,rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%), url(../IMAGES/header1.jpg);
+    background-blend-mode: multiply;
+    transform: translateZ(-1px) translateY(-25px) scale(1.5);
   }
 
   section.section-quote div.background{
@@ -763,7 +766,8 @@ footer div.developed-by{
   
       section.header div.background{
         transform: translateZ(-1px) scale(2);
-        background-image: url(../IMAGES/header-mobile.jpg)!important;
+/*        background-image: url(../IMAGES/header-mobile.jpg)!important;*/
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0.8) 100%), url(../IMAGES/header-mobile.jpg)!important;
       }
   
       section.header button.go-down{
