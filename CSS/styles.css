@@ -4,6 +4,12 @@ body{
   color: #808080;
 }
 
+*:not(h1):not(h2) {
+  line-height: 23pt;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
 div.container{
   position: relative;
   left: 50%;
@@ -32,7 +38,7 @@ div.menu{
     margin-top: 30px;
     
     display: flex;
-    width: 500px;
+    width: 648px;
     justify-content: space-between;
   }
 
@@ -41,6 +47,7 @@ div.menu{
       display: inline-block;
       position: relative;
       cursor: pointer;
+      text-transform: uppercase;
     }
 
     div.menu ul li:after{
@@ -182,7 +189,7 @@ section div.background{
   left: 0;
   
   transform: translateZ(-1px) scale(1.5);
-  z-index: -1;
+  z-index: 0;
 }
 
   section.header div.background{
@@ -207,6 +214,7 @@ section{
     color: #D50013;
     position: relative;
     font-weight: lighter;
+    text-transform: uppercase;
   }
 
     section h1.title:after{
@@ -252,6 +260,7 @@ section{
     }
 
     section.header div.call{
+      width: 600px;
       position: absolute;
       top: 350px;
       left: 50%;
@@ -268,11 +277,15 @@ section{
 
       section.header div.call h1{
         font-size: 25pt;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+
       }
 
       section.header div.call h2{
         font-size: 16pt;
         font-weight: lighter;
+        text-transform: uppercase;
       }
 
   section.why-bilingue{
@@ -355,23 +368,28 @@ section{
     
     section.next-stage div.layout.three.red>div:last-child{
       column-count: 2;
+      column-gap: 36px;
     }
 
   section.section-quote{
     height: 600px;
-/*
-    background-image: url(../IMAGES/quote.jpg);
-    background-size: cover;
-    background-position: center;
-*/
+
+    background: rgba(196,41,36,1);
+    background: -moz-linear-gradient(top, rgba(196,41,36,1) 0%, rgba(196,41,36,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(196,41,36,1)), color-stop(50%, rgba(196,41,36,1)), color-stop(51%, rgba(255,255,255,1)), color-stop(71%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(196,41,36,1) 0%, rgba(196,41,36,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(196,41,36,1) 0%, rgba(196,41,36,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(196,41,36,1) 0%, rgba(196,41,36,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(196,41,36,1) 0%, rgba(196,41,36,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c42924', endColorstr='#ffffff', GradientType=0 );
   }
 
     section.section-quote div.quote{
       display: block;
       position: absolute;
-      width: 237px;
-      height: 273px;
-      padding: 25px 20px 30px 20px;
+      width: 260px;
+      height: 300px;
+      padding: 33px 20px 30px 20px;
       text-align: center;
       color: #fff;
       box-sizing: border-box;
@@ -383,10 +401,11 @@ section{
       section.section-quote div.quote:after{
         content: "";
         background-image: url(../IMAGES/icons/arrow-down.svg);
+        mix-blend-mode: multiply;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.7;
+        opacity: 0.85;
         top: 0;
         left: 0;
         bottom: 0;
@@ -400,7 +419,7 @@ section{
       }
 
       section.section-quote div.quote div.text{
-        
+        line-height: 24px;
       }
 
       section.section-quote div.quote div.author{
@@ -438,21 +457,27 @@ section.not-all-schools{
     border-right: 1px solid #fff;
     width: 40%;
     padding-right: 30px;
-    
+    line-height: 27pt;
+
   }
 
   section.not-all-schools div.layout div{
-    width: calc(30% - 38px);
+    width: calc(30% - 50px);
     text-align: justify;
   }
 
   section.kids{
     height: 600px;
-/*
-    background-image: url(../IMAGES/kids.jpg);
-    background-size: cover;
-    background-position: center;
-*/
+
+    background: rgba(154,154,158,1);
+    background: -moz-linear-gradient(top, rgba(154,154,158,1) 0%, rgba(154,154,158,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(154,154,158,1)), color-stop(50%, rgba(154,154,158,1)), color-stop(51%, rgba(255,255,255,1)), color-stop(71%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(154,154,158,1) 0%, rgba(154,154,158,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(154,154,158,1) 0%, rgba(154,154,158,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(154,154,158,1) 0%, rgba(154,154,158,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(154,154,158,1) 0%, rgba(154,154,158,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a9a9e', endColorstr='#ffffff', GradientType=0 );
+
   }
 
 section.why-now{
@@ -510,12 +535,14 @@ form.schedule{
     height: 50px;
     font-family: Exo, sans-serif;
     outline: none;
+    font-size: 11pt;
   }
 
     form button.arrow{
       left: 50%;
       position: relative;
       transform: translateX(-50%);
+      text-align: center;
     }
 
     form.schedule input::splaceholder{
@@ -650,10 +677,11 @@ footer div.developed-by{
     top: 20px;
     width: 100%;
     text-align: center;
+    z-index: 2;
   }
   
     div.menu-mobile img{
-      width: 250px;
+      width: 200px;
     }
   
   div.item{
@@ -711,9 +739,9 @@ footer div.developed-by{
   
   section.header div.gradient{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0+80,0.8+100 */
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 80%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
   }
   
@@ -725,7 +753,8 @@ footer div.developed-by{
     }
   
       section.header div.call h1{
-        
+        text-transform: uppercase;
+        line-height: 43px;
       }
   
       section.header div.call h2{
@@ -896,8 +925,8 @@ footer div.developed-by{
   }
   
     section.section-quote div.quote{
-      width: 216px;
-      height: 247px;
+      width: 260px;
+      height: 300px;
       padding: 20px 15px 25px 15px;
       right: auto;
       left: 50%;
