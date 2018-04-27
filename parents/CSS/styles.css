@@ -120,23 +120,56 @@ section{
 
 @keyframes clouds1{
   from{
-    background-position: 0% center;
+    transform: translateX(-50px);
   }
   to{
-    background-position: 10% center;
+    transform: translateX(100px);
+  }
+}
+
+@keyframes clouds-reverse{
+  from{
+    transform: translateX(100px);
+  }
+  to{
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes cloud{
+  from{
+    transform: translateX(-100px);
+  }
+  to{
+    transform: translateX(200px);
   }
 }
 
     section.header .clouds-1{
       background-image: url(../IMAGES/Asset%202.svg);
       background-size: contain;
+      background-position: 10% center;
 /*      background-position: center;*/
 
       animation-name: clouds1;
-      animation-duration: 1s;
+      animation-duration: 10s;
+      animation-timing-function: ease;
       animation-fill-mode: forwards;
       animation-play-state: running;
 
+    }
+
+    section.header .cloud{
+      position: absolute;
+      bottom: 0px;
+      width: 400px;
+      right: 50%;
+
+      animation-name: cloud;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
     }
 
   section.your-son{
@@ -149,6 +182,24 @@ section{
       background-image: url(../IMAGES/Asset-3.svg);
       background-size: contain;
       background-position: 0% center;
+
+      animation-name: clouds1;
+      animation-duration: 7s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+    }
+
+    section.your-son .clouds-3{
+      background-image: url(../IMAGES/Asset-4.svg);
+      background-size: contain;
+      background-position: 0% center;
+
+      animation-name: clouds-reverse;
+      animation-duration: 7s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
     }
 
     section.your-son h1{
