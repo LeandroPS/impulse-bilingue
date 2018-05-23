@@ -1,0 +1,258 @@
+
+body{
+  font-family: Exo, sans-serif;
+  margin: 0 auto;
+  color: #808080;
+  overflow-x: hidden;
+}
+
+div.background{
+  background-image: url(../IMAGES/girl.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 50px);
+  top: 0;
+  left: 0;
+}
+
+  div.background img.ensino-bilingue{
+    display: none;
+  }
+
+
+div.container{
+  margin: 0 auto;
+  position: relative;
+  width: 1000px;
+  max-width: calc(100% - 20px);
+}
+
+  div.container.inicial{
+    min-height: calc(100vh - 50px);
+  }
+
+img.ensino-bilingue{
+  width: 200px;
+
+  position: absolute;
+  left: 40px;
+  top: calc(50% - 60px);
+  transform: translateY(-50%);
+}
+
+div.buttons{
+  position: absolute;
+  right: 40px;
+  top: calc(50% - 60px);
+  transform: translateY(-50%);
+}
+
+  div.buttons a{
+    display: block;
+    border: 1px solid #B3B3B3;
+    border-radius: 50px;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #B3B3B3;
+    position: relative;
+    padding-right: 60px;
+    text-transform: uppercase;
+  }
+
+    div.buttons a:after{
+      content:"";
+      background-image: url(../IMAGES/seta.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      height: 30px;
+      width: 10px;
+    }
+
+  div.buttons .or{
+    display: block;
+    text-align: center;
+    margin: 10px 0px;
+    color: #B3B3B3;
+  }
+
+div.layout{
+  display: flex;
+  justify-content: space-between;
+}
+
+  div.layout>div{
+    width: 33%;
+  }
+
+  div.layout.two>div{
+    width: calc(50% - 10px);
+  }
+
+  div.layout.two-right>div:first-child{
+    width: calc(100% - 620px);
+  }
+
+  div.layout.two-right>div:last-child{
+    width: 600px;
+  }
+
+  div.layout.three>div{
+    width: 33%;
+  }
+
+footer{
+  text-align: center;
+  padding: 40px;
+  background-color: #D50013;
+  position: relative;
+/*  margin-top: 80px;*/
+  color: #fff;
+}
+
+  footer:before{
+    content: url(../IMAGES/icons/logo-solo-border.svg);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(100% - 30px);
+  }
+
+  footer>div.layout.three{
+    align-items: center;
+  }
+
+  footer div.social{
+    display: flex;
+    justify-content: space-around;
+    width: 110px;
+    margin-bottom: 5px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+
+    footer div.social img{
+      width: 25px;
+    }
+
+footer .copyright{
+  font-size: 11pt;
+}
+
+footer .footer-message{
+  height: 14px;
+  margin-bottom: -2px;
+  margin-right: 3px;
+}
+
+footer div.developed-by{
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+  footer img.tratt-logo{
+    height: 12px;
+  }
+
+@media screen and (max-width: 700px) {
+
+  div.background img.ensino-bilingue{
+    display: block;
+    width: 150px;
+    left: 20px;
+
+  }
+
+  div.container.inicial img.ensino-bilingue{
+    display: none;
+  }
+
+  div.container.inicial{
+    max-width: 100%;
+    width: 100%;
+    min-height: 0px;
+  }
+
+  div.background{
+    background-image: url(../IMAGES/girl-mini.png);
+    position: relative;
+    height: 600px;
+  }
+
+  div.buttons{
+    padding: 20px 40px;
+    background: #F6F7FA;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    padding-bottom: 200px;
+  }
+
+    div.buttons a{
+
+    }
+
+  footer{
+    padding: 0px;
+    padding-top: 40px;
+  }
+
+    footer div.layout{
+
+      flex-wrap: wrap;
+    }
+
+      footer div.container{
+        width: 100%!important;
+        max-width: 100%!important;
+      }
+
+      footer div.layout>div{
+        width: 100%!important;
+
+      }
+
+        footer div.layout>div:not(:last-child){
+          margin-bottom: 20px;
+        }
+
+      footer div.layout>div:nth-child(1){
+        order: 1;
+        margin-bottom: 30px;
+      }
+
+      footer div.layout>div:nth-child(2){
+        order: 0;
+
+      }
+
+      footer div.layout>div:last-child{
+        background-color: #B5000B;
+        order: 2;
+        padding: 20px;
+        padding-top: 30px;
+      }
+
+      footer div.developed-by{
+        background-color: #B5000B;
+        padding-bottom: 40px;
+        margin-top: 0px;
+        padding-top: 20px;
+      }
+
+}
