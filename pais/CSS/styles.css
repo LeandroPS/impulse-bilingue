@@ -68,8 +68,8 @@ div.background{
   width: 100%;
   height: 100%;
 
-  top: 0;
-  left: 0;
+  top: auto;
+  left: auto;
 }
 
   div.background.girl-headphone{
@@ -287,6 +287,7 @@ section{
       transform: translateY(-50%);
       color: #fff;
       font-size: 17pt;
+      line-height: 36px;
 
       position: absolute;
     }
@@ -787,6 +788,7 @@ footer div.developed-by{
 
   div.background.boy{
     background-image: url(../IMAGES/boy-mobile.png);
+    z-index: 2;
   }
 
   section.your-son{
@@ -794,7 +796,7 @@ footer div.developed-by{
   }
 
     section.your-son h1{
-      font-size: 15pt;
+      font-size: 19pt;
     }
 
     section.your-son p{
@@ -836,11 +838,14 @@ footer div.developed-by{
         left: auto;
       }
 
-
+  section.all-spoke{
+    height: 450px;
+  }
 
   section.all-spoke div.advice{
     width: 127px;
     font-size: 12pt;
+    line-height: normal;
   }
 
   section.balloon div.balloon {
@@ -1201,6 +1206,9 @@ footer div.developed-by{
 }
 
 @media screen and (max-width: 350px) {
+  section.your-son h1 {
+    font-size: 16pt;
+  }
 
   div.items-player{
     display: block;
@@ -1214,5 +1222,17 @@ footer div.developed-by{
     padding: 39px 10px;
     font-size: 11pt;
     margin-top: -100px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+
+  section.header{
+    height: 800px;
+  }
+
+  section.header .balloon-1 {
+    height: 534px;
+    width: 497px;
   }
 }

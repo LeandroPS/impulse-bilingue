@@ -6,6 +6,10 @@ body{
   overflow-x: hidden;
 }
 
+img.logo{
+  display: none;
+}
+
 div.background{
   background-image: url(../IMAGES/girl.jpg);
   background-size: cover;
@@ -14,7 +18,7 @@ div.background{
 
   position: absolute;
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 145px);
   top: 0;
   left: 0;
 }
@@ -32,7 +36,7 @@ div.container{
 }
 
   div.container.inicial{
-    min-height: calc(100vh - 50px);
+    min-height: calc(100vh - 145px);
   }
 
 img.ensino-bilingue{
@@ -49,6 +53,7 @@ div.buttons{
   right: 40px;
   top: calc(50% - 60px);
   transform: translateY(-50%);
+  letter-spacing: 1px;
 }
 
   div.buttons a{
@@ -168,6 +173,16 @@ footer div.developed-by{
   }
 
 @media screen and (max-width: 700px) {
+
+  img.logo{
+    display: block;
+    position: absolute;
+    width: 130px;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
 
   div.background img.ensino-bilingue{
     display: block;
