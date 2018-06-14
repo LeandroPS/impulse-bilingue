@@ -441,6 +441,18 @@ section{
     padding: 80px 0px;
   }
 
+    section.why-impulse-system div.layout.two > div{
+      width: calc(100% - 20px);
+    }
+
+    section.why-impulse-system div.layout.two > div.shortable{
+      font-size: 15px;
+    }
+
+    section.why-impulse-system div.layout.two > div.items-player{
+      margin-left: 30px;
+    }
+
     section.why-impulse-system h1{
       margin-top: 0px;
     }
@@ -464,15 +476,15 @@ section.not-all-schools{
 
   section.not-all-schools div.layout div:first-child{
     border-right: 1px solid #fff;
-    width: 40%;
+    width: 37%;
     padding-right: 30px;
     line-height: 27pt;
 
   }
 
   section.not-all-schools div.layout div{
-    width: calc(30% - 50px);
-    text-align: justify;
+    width: calc(30% - 60px);
+    text-align: left;
   }
 
   section.kids{
@@ -834,6 +846,7 @@ footer div.developed-by{
     position: relative;
     white-space: nowrap;
     width: 100%!important;
+    margin-left: 0px!important;
   }
 
     div.items-player>div.item{
