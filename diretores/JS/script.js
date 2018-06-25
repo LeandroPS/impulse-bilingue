@@ -1,5 +1,7 @@
 $(function(){
 
+  //$('main.wrapper').stellar();
+
   $("div.menu ul li").click(function() {
 
     $("div.menu ul li").removeClass("current");

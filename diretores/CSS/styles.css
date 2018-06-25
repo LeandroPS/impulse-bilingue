@@ -166,8 +166,8 @@ section div.background{
 }
 
   section.header div.background{
-    background-image: url(../IMAGES/header1.jpg);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%,rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%), url(../IMAGES/header1.jpg);
+/*    background-image: url(../IMAGES/header1.jpg);*/
+    background-image: url(../IMAGES/header1.png);
     background-blend-mode: multiply;
     transform: translateZ(-1px) translateY(-25px) scale(1.5);
   }
@@ -797,12 +797,17 @@ footer div.developed-by{
         height: 40px;
         border-radius: 50%;
         border: none;
-        background-color: rgba(255, 255, 255, 0.3);
+/*        background-color: rgba(255, 255, 255, 0.3);*/
+        background-image: url(../IMAGES/icons/arrow-button.svg);
+        background-size: cover;
+        background-position: center;
+        background-color: transparent;
 
         position: absolute;
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
+        opacity: 0.5;
       }
 
   section.why-bilingue{
